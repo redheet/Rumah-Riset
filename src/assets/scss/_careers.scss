@@ -1,0 +1,135 @@
+/*=======  Careers  =======*/
+.job-categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+
+    @media #{$md} {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media #{$sm} {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media #{$tiny} {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .single-cat {
+        text-align: center;
+
+        a {
+            display: block;
+            color: $secondary-color;
+            padding: 40px;
+            font-size: 24px;
+            font-weight: 600;
+            font-family: $ssp;
+            background-color: $soft-gery;
+            border-radius: 7px;
+            line-height: 1;
+
+            @media #{$lg} {
+                padding: 40px 20px;
+                font-size: 22px;
+            }
+
+            @media #{$xsm} {
+                font-size: 18px;
+            }
+
+            i {
+                font-size: 55px;
+                margin-bottom: 20px;
+                font-weight: 400;
+
+                @media #{$xsm} {
+                    font-size: 40px;
+                }
+            }
+
+            span {
+                display: block;
+                line-height: 1.2;
+            }
+
+            &:hover {
+                color: $white;
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+.job-lists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+
+    @media #{$sm} {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .single-job {
+        background-color: $white;
+        padding: 40px;
+        font-size: 15px;
+        @include transition(0.3s);
+
+        @media #{$md} {
+            padding: 40px 25px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            @include transition(0.3s);
+
+            @media #{$md} {
+                font-size: 22px;
+            }
+
+            .job-time {
+                font-size: 16px;
+                color: $text-color;
+                @include transition(0.3s);
+            }
+        }
+
+        .apply-btn {
+            margin-top: 30px;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 700;
+            color: $secondary-color;
+            border: 2px solid #D0D0D0;
+            border-radius: 5px;
+            padding: 10px 30px;
+
+            @media #{$xsm} {
+                padding: 8px 25px;
+            }
+
+            i {
+                margin-left: 8px;
+            }
+        }
+
+        &:hover {
+            background-color: $primary-color;
+
+            .title,
+            &,
+            .job-time {
+                color: $white;
+            }
+
+            .apply-btn {
+                border-color: $white;
+                background-color: $white;
+            }
+        }
+    }
+}

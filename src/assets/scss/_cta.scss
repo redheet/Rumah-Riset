@@ -1,0 +1,34 @@
+/*=======  Cta Css  =======*/
+.cta-wrap {
+    background-color: $primary-color;
+    position: relative;
+    padding: 60px 0;
+    z-index: 2;
+
+    &.mt-negative {
+        margin-top: -60px;
+    }
+
+    .section-title {
+        .title-tag {
+            color: $white;
+
+            &::before,
+            &::after {
+                background-color: $white;
+            }
+        }
+
+        .title {
+            color: $white;
+        }
+    }
+
+    .main-btn.main-btn-3:hover {
+        color: $secondary-color;
+
+        &::after {
+            background-color: $white;
+        }
+    }
+}

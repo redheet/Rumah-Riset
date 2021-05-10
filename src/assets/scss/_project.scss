@@ -1,0 +1,225 @@
+/*=======  Project CSS  =======*/
+.project-boxes {
+
+	.project-box {
+		position: relative;
+		height: 415px;
+		margin-bottom: 90px;
+
+		@media #{$sm} {
+			height: 320px;
+		}
+
+		.project-thumb {
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+
+			.thumb {
+				@include transition(0.3s);
+				height: 100%;
+				width: 100%;
+			}
+		}
+
+		.project-desc {
+			position: absolute;
+			left: 30px;
+			right: 30px;
+			bottom: -55px;
+			padding: 35px 15px 25px;
+			border-radius: 8px;
+			background-color: $white;
+			box-shadow: 0px 10px 32px 0px rgba(197, 197, 197, 0.4);
+			z-index: 2;
+			color: $secondary-color;
+			line-height: 1.2;
+			@include transition(0.3s);
+
+			@media #{$sm} {
+				left: 15px;
+				right: 15px;
+				font-size: 15px;
+			}
+
+
+			h4 {
+				font-size: 24px;
+				font-weight: 600;
+				margin-bottom: 10px;
+				@include transition(0.3s);
+
+				@media #{$sm} {
+					font-size: 20px;
+				}
+			}
+
+			.project-link {
+				font-size: 24px;
+				margin-top: 10px;
+				color: $secondary-color;
+				@include transition(0.3s);
+				line-height: 1;
+			}
+		}
+
+		&:hover {
+			.project-desc {
+				box-shadow: none;
+				background-color: $primary-color;
+
+				&,
+				h4 a,
+				.project-link {
+					color: $white;
+				}
+			}
+
+			.project-thumb .thumb {
+				transform: scale(1.1);
+			}
+		}
+
+		&.hover-style {
+			margin-bottom: 30px;
+			height: 370px;
+			overflow: hidden;
+
+			@media #{$sm} {
+				height: 300px;
+			}
+
+			.project-thumb {
+				position: relative;
+
+				.thumb {
+					@media #{$xsm} {
+						background-position: 0 5%;
+					}
+				}
+
+				&::before {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					content: "";
+					background-color: $secondary-color;
+					opacity: 0;
+					visibility: hidden;
+					@include transition(0.3s);
+					z-index: 1;
+				}
+			}
+
+			.project-desc {
+				bottom: -10px;
+				visibility: hidden;
+				opacity: 0;
+			}
+
+			&:hover {
+				.project-desc {
+					visibility: visible;
+					opacity: 1;
+					bottom: 0;
+				}
+
+				.project-thumb::before {
+					opacity: 0.45;
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	.project-box.wide-box {
+		.project-desc {
+			left: 65px;
+			right: 65px;
+
+			@media #{$md} {
+				left: 30px;
+				right: 30px;
+			}
+		}
+	}
+
+	.project-box.wide-long-box {
+		height: 770px;
+
+		@media #{$sm} {
+			height: 630px;
+		}
+
+		.project-desc {
+			left: 65px;
+			right: 65px;
+
+			@media #{$md} {
+				left: 30px;
+				right: 30px;
+			}
+		}
+	}
+
+}
+
+.project-nav {
+	text-align: center;
+	border-bottom: 3px solid #E7E8E9;
+	padding: 15px 0;
+
+	@media #{$sm} {
+		border-bottom: none;
+		padding: 0;
+	}
+
+	li {
+		display: inline-block;
+		color: $secondary-color;
+		font-weight: 700;
+		font-size: 18px;
+		font-family: $ssp;
+		position: relative;
+		padding: 15px;
+		cursor: pointer;
+
+		@media #{$md} {
+			padding: 10px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: -18px;
+			height: 3px;
+			width: 0%;
+			content: "";
+			background-color: $primary-color;
+			transition: 0.3s;
+			opacity: 0;
+			visibility: hidden;
+
+			@media #{$sm} {
+				bottom: 0;
+			}
+		}
+
+		&:hover,
+		&.active {
+			&::before {
+				opacity: 1;
+				visibility: visible;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.project-section {
+	padding-top: 130px;
+	padding-bottom: 95px;
+}

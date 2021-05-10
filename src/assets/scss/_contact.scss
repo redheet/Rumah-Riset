@@ -1,0 +1,161 @@
+/*=======  Contact Css  =======*/
+.contact-section {
+    &.boxed-style-with-map {
+        .contact-inner {
+            padding: 80px 70px;
+            position: relative;
+            z-index: 2;
+
+            &.mt-negative {
+                margin-top: -130px;
+            }
+
+            @media #{$lg} {
+                padding: 50px 30px 80px;
+            }
+
+            @media #{$tiny} {
+                padding: 30px 15px 80px;
+            }
+
+            .contact-map {
+                height: 100%;
+                width: 100%;
+                background-color: #b7b7b7;
+
+                @media #{$md} {
+                    height: 500px;
+                    margin-bottom: 50px;
+                }
+
+                @media #{$sm} {
+                    height: 400px;
+                }
+
+                @media #{$xsm} {
+                    height: 300px;
+                }
+
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .contact-form {
+                padding-left: 70px;
+
+                @media #{$md} {
+                    padding-left: 0;
+                }
+
+                .input-group {
+
+                    input,
+                    textarea,
+                    select {
+                        border-radius: 7px;
+                        padding-right: 60px;
+                    }
+
+                    .icon {
+                        font-size: 18px;
+                        right: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.with-illustration-img {
+        position: relative;
+
+        .illustration-img {
+            position: absolute;
+            left: 2%;
+            bottom: 0;
+            z-index: 1;
+            max-width: 645px;
+
+            @media #{$xl} {}
+        }
+
+        .contact-form {
+            position: relative;
+            z-index: 2;
+
+            .input-group {
+
+                input,
+                textarea,
+                select {
+                    border-radius: 7px;
+                }
+
+                .icon {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    &.contact-page {
+        .contact-info {
+            .contact-info-content {
+                margin-bottom: 50px;
+
+                ul {
+                    margin-top: 30px;
+
+                    li {
+                        font-size: 20px;
+                        margin-bottom: 15px;
+
+                        &,
+                        a {
+                            color: $text-color;
+
+                            i {
+                                font-size: 18px;
+                                color: $primary-color;
+                                margin-right: 10px;
+                            }
+                        }
+
+                        &.phone {
+
+                            &,
+                            a {
+                                color: $secondary-color;
+                                font-weight: 700;
+                                font-size: 30px;
+                            }
+
+                            i {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .contact-form {
+            padding: 70px 0;
+            margin-bottom: -170px;
+            position: relative;
+        }
+
+        .contact-map {
+            height: 650px;
+            width: 100%;
+            background-color: #b7b7b7;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

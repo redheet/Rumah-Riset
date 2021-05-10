@@ -1,0 +1,240 @@
+/*======= Why Choose Us =======*/
+.wcu-section {
+	.wcu-text {
+		color: #c2d9eb;
+
+		@media #{$md} {
+			margin-top: 40px;
+		}
+
+		ul {
+			margin: 40px 0;
+
+			li {
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+
+				i {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		.section-title h2 {
+			color: $white;
+		}
+	}
+
+	.wcu-text-two {
+		padding-left: 45px;
+
+		@media #{$lg} {
+			padding-left: 20px;
+		}
+
+		@media #{$md} {
+			padding-left: 0;
+			margin-top: 50px;
+		}
+
+		ul {
+			margin: 40px 0;
+
+			&::before {
+				content: '';
+				display: block;
+				clear: both;
+			}
+
+			li {
+				font-weight: 600;
+				margin-bottom: 10px;
+				float: left;
+				width: 50%;
+
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+
+				i {
+					margin-right: 10px;
+					color: $primary-color;
+				}
+
+				&::before {
+					content: '';
+					display: block;
+					clear: both;
+				}
+			}
+		}
+	}
+
+	.wcu-video {
+		position: relative;
+		min-height: 690px;
+
+		@media #{$lg} {
+			min-height: 620px;
+		}
+
+		@media #{$md} {
+			min-height: 580px;
+		}
+
+		@media #{$sm} {
+			min-height: 480px;
+		}
+
+		@media #{$tiny} {
+			min-height: 400px;
+		}
+
+		.video-poster-one,
+		&::before {
+			width: 600px;
+			height: 600px;
+			border-radius: 50%;
+			position: absolute;
+			left: -45px;
+			top: 0;
+
+			@media #{$lg} {
+				width: 500px;
+				height: 500px;
+			}
+
+			@media #{$sm} {
+				left: 0;
+				width: 400px;
+				height: 400px;
+			}
+
+			@media #{$xsm} {
+				width: 380px;
+				height: 380px;
+			}
+
+			@media #{$tiny} {
+				width: 280px;
+				height: 280px;
+			}
+		}
+
+		&::before {
+			content: "";
+			background-image: url(../img/lines/11.png);
+			z-index: 1;
+			background-position: 0 -45%;
+			background-repeat: no-repeat;
+
+			@media #{$md} {
+				background-size: cover;
+			}
+		}
+
+		.video-poster-two,
+		&::after {
+			position: absolute;
+			bottom: 0;
+			right: 30px;
+			width: 305px;
+			height: 305px;
+			border-radius: 50%;
+			border: 20px solid $white;
+
+			@media #{$lg} {
+				width: 250px;
+				height: 250px;
+			}
+
+			@media #{$md} {
+				width: 220px;
+				height: 220px;
+				border-width: 10px;
+				right: 10px;
+			}
+
+			@media #{$tiny} {
+				width: 200px;
+				height: 200px;
+				border-width: 5px;
+				right: 0;
+			}
+		}
+
+		&::after {
+			background-color: $secondary-color;
+			opacity: 0.36;
+			content: '';
+		}
+
+		.video-poster-two {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			a {
+				font-size: 30px;
+				color: $primary-color;
+				position: relative;
+				z-index: 2;
+			}
+		}
+	}
+}
+
+.wcu-section.box-style {
+	.wcu-inner {
+		position: relative;
+		background-color: $secondary-color;
+		padding: 110px 100px;
+		z-index: 2;
+
+		@media #{$lg} {
+			padding: 90px 60px;
+		}
+
+		@media #{$xsm} {
+			padding: 60px 30px;
+		}
+
+		&::before,
+		&::after {
+			position: absolute;
+			background-color: $secondary-color;
+			z-index: -2;
+			content: '';
+			opacity: 0.07;
+		}
+
+		&::before {
+			left: -20px;
+			right: -20px;
+			bottom: -20px;
+			top: 20px;
+		}
+
+		&::after {
+			left: -40px;
+			right: -40px;
+			bottom: -40px;
+			top: 40px;
+		}
+
+		.line-shape-one {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: -1;
+		}
+
+		.line-shape-two {
+			position: absolute;
+			z-index: -1;
+			right: 60px;
+			bottom: 50px;
+		}
+	}
+}

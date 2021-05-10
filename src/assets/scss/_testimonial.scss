@@ -1,0 +1,549 @@
+/*=======  Testimonial One  =======*/
+.testimonial-section {
+	position: relative;
+	z-index: 1;
+	padding-top: 130px;
+	padding-bottom: 160px;
+	overflow: hidden;
+
+	@media (max-width: 1800px) {
+		padding-bottom: 130px;
+	}
+
+	@media #{$lg} {
+		padding-top: 100px;
+		padding-bottom: 90px;
+	}
+
+	@media #{$md} {
+		padding-top: 500px;
+	}
+
+	@media #{$xsm} {
+		padding-top: 390px;
+	}
+
+	.offset-lg-5 {
+		@media #{$xl} {
+			margin-left: 50%;
+		}
+
+		@media #{$md} {
+			margin-left: 0;
+		}
+	}
+
+	&::before {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		right: 0;
+		top: 0;
+		background-size: auto;
+		content: '';
+		background-position: right bottom;
+		background-image: url(../img/lines/06.png);
+		background-repeat: no-repeat;
+		z-index: -1;
+
+		@media #{$lg} {
+			background-size: 35%;
+		}
+	}
+
+	.testimonial-items {
+		margin-top: 80px;
+
+		@media #{$md} {
+			margin-top: 60px;
+		}
+
+		.testimonial-item {
+			font-size: 20px;
+			color: $secondary-color;
+
+			@media #{$lg} {
+				font-size: 18px;
+			}
+
+			p {
+				margin-bottom: 10px;
+			}
+
+			.quote-top,
+			.quote-bottom {
+				color: $primary-color;
+				font-size: 16px;
+				position: relative;
+			}
+
+			.quote-top {
+				margin-right: 10px;
+				top: -5px;
+			}
+
+			.quote-bottom {
+				margin-left: 10px;
+				bottom: -5px;
+			}
+
+			.author {
+				margin-top: 30px;
+				display: flex;
+				align-items: center;
+				line-height: 1.2;
+
+				.thumb {
+					min-width: 75px;
+
+					img {
+						width: 60px;
+						height: 60px;
+						border-radius: 50%;
+					}
+				}
+
+				h4 {
+					font-size: 22px;
+					font-weight: 600;
+					letter-spacing: -1px;
+				}
+
+				span {
+					font-weight: 600;
+					color: $primary-color;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
+	.testimonial-arrows {
+		margin-top: 60px;
+
+		@media #{$xsm} {
+			margin-top: 40px;
+		}
+
+		.slick-arrow {
+			font-size: 50px;
+			background: transparent;
+			color: $primary-color;
+			line-height: 1;
+			@include transition(0.3s);
+
+			&.next-arrow {
+				margin-left: 40px;
+			}
+
+			&.prev-arrow {
+				opacity: 0.3;
+				color: $secondary-color;
+
+				&:hover {
+					opacity: 1;
+					color: $primary-color;
+				}
+			}
+
+			@media #{$lg} {
+				font-size: 40px;
+			}
+		}
+	}
+
+	.testimonial-img {
+		position: absolute;
+		top: 0;
+		left: 50px;
+		max-width: 750px;
+
+		@media (max-width: 1800px) {
+			max-width: 630px;
+		}
+
+		@media (max-width: 1400px) {
+			max-width: 530px;
+		}
+
+		@media #{$lg} {
+			max-width: 430px;
+		}
+
+		@media #{$md} {
+			max-height: 460px;
+		}
+
+		@media #{$xsm} {
+			left: 30px;
+			max-width: 320px;
+			max-height: 340px;
+		}
+	}
+}
+
+/*=======  Testimonial Two  =======*/
+.testimonial-section-two {
+	position: relative;
+
+	.testimonial-quote-icon {
+		position: absolute;
+		left: 190px;
+		top: 170px;
+	}
+
+	.testimonial-quote-icon {
+		position: absolute;
+		left: 190px;
+		top: 170px;
+
+		@media #{$xl} {
+			left: 140px;
+			max-width: 250px;
+		}
+
+		@media #{$lg} {
+			left: 100px;
+		}
+
+		@media #{$md} {
+			max-width: 180px;
+			left: 80px;
+		}
+	}
+
+	.testimonial-items {
+		.testimonial-item {
+			font-size: 24px;
+			line-height: 1.583;
+			text-align: center;
+
+			@media #{$md} {
+				font-size: 20px;
+			}
+
+			@media #{$xsm} {
+				font-size: 18px;
+			}
+
+			.quote-top,
+			.quote-bottom {
+				color: $primary-color;
+				font-size: 16px;
+				position: relative;
+			}
+
+			.quote-top {
+				margin-right: 10px;
+				top: -5px;
+			}
+
+			.quote-bottom {
+				margin-left: 10px;
+				bottom: -5px;
+			}
+
+			.author-img {
+				margin-bottom: 50px;
+
+				img {
+					border-radius: 15px;
+					height: 100px;
+					width: 100px;
+					box-shadow: 0px 10px 30px 0px rgba(20, 33, 43, 0.32);
+				}
+			}
+
+			.author-name {
+				margin-top: 40px;
+
+				h4 {
+					font-size: 22px;
+					font-weight: 600;
+					letter-spacing: -1px;
+				}
+
+				span {
+					font-weight: 600;
+					color: $primary-color;
+					font-size: 16px;
+				}
+			}
+		}
+
+		.slick-arrow {
+			position: absolute;
+			left: -18%;
+			top: 50%;
+			font-size: 50px;
+			line-height: 1;
+			background-color: transparent;
+			color: $secondary-color;
+			z-index: 2;
+			opacity: 0.3;
+			@include transition(0.3s);
+
+			@media #{$xl} {
+				left: -15%;
+			}
+
+			@media #{$md} {
+				left: -8%;
+				font-size: 35px;
+			}
+
+			&.next-arrow {
+				left: auto;
+				right: -18%;
+
+				@media #{$xl} {
+					right: -15%;
+				}
+
+				@media #{$md} {
+					right: -8%;
+				}
+			}
+
+			&:hover {
+				opacity: 1;
+				color: $primary-color;
+			}
+		}
+	}
+
+	.testimonial-dots {
+		text-align: center;
+		margin-top: 55px;
+
+		@media #{$xsm} {
+			display: none;
+		}
+
+		li {
+			display: inline-block;
+			margin: 0 10px;
+
+			img {
+				cursor: pointer;
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+/*=======  Testimonial Three  =======*/
+.testimonial-section-three {
+	padding: 130px 0 250px;
+	position: relative;
+
+	@media #{$md} {
+		padding: 100px 0 200px;
+	}
+
+	&::before {
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: $secondary-color;
+		opacity: 0.9;
+	}
+
+	.testimonial-items {
+		.testimonial-item {
+			.content {
+				color: $white;
+				font-size: 40px;
+				line-height: 1.3;
+				font-weight: 300;
+				letter-spacing: -1px;
+
+				@media #{$lg} {
+					font-size: 32px;
+				}
+
+				@media #{$md} {
+					font-size: 25px;
+				}
+
+				@media #{$sm} {
+					font-size: 22px;
+				}
+
+				@media #{$xsm} {
+					font-size: 20px;
+				}
+			}
+
+			.quote-top,
+			.quote-bottom {
+				color: $primary-color;
+				font-size: 35px;
+				position: relative;
+
+				@media #{$sm} {
+					font-size: 25px;
+				}
+			}
+
+			.quote-top {
+				margin-right: 10px;
+				top: -10px;
+			}
+
+			.quote-bottom {
+				margin-left: 10px;
+				bottom: -10px;
+			}
+
+			.author {
+				margin-top: 40px;
+
+				h4 {
+					font-size: 25px;
+					font-weight: 600;
+					color: $white;
+
+					@media #{$xsm} {
+						font-size: 22px;
+					}
+				}
+
+				span {
+					font-weight: 700;
+					font-size: 16px;
+					line-height: 1;
+					color: $white;
+
+					@media #{$xsm} {
+						font-size: 14px;
+					}
+				}
+			}
+
+			.author-thumb {
+				margin-bottom: 60px;
+				position: relative;
+				z-index: 1;
+
+				img {
+					width: 120px;
+					height: 120px;
+					border-radius: 50%;
+					border: 6px solid $white;
+
+					@media #{$xsm} {
+						width: 100px;
+						height: 100px;
+						border-width: 4px;
+					}
+				}
+
+				&::before {
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					bottom: -20px;
+					width: 50px;
+					height: 30px;
+					content: "";
+					background-image: url(../img/icons/down-arrow.png);
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+					z-index: -1;
+				}
+			}
+
+		}
+
+		.slick-arrow {
+			position: absolute;
+			left: -22%;
+			top: 50%;
+			font-size: 50px;
+			line-height: 1;
+			background-color: transparent;
+			color: $white;
+			z-index: 2;
+			@include transition(0.3s);
+
+			@media #{$xl} {
+				left: -10%;
+			}
+
+			@media #{$md} {
+				left: -6%;
+				font-size: 35px;
+				top: 60%;
+			}
+
+			&.next-arrow {
+				left: auto;
+				right: -22%;
+
+				@media #{$xl} {
+					right: -10%;
+				}
+
+				@media #{$md} {
+					right: -6%;
+				}
+			}
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+
+
+	&.no-bg {
+		padding: 130px 0;
+		background: none;
+
+		@media #{$md} {
+			padding: 100px 0;
+		}
+
+		&::before {
+			display: none;
+		}
+
+		.testimonial-items {
+			.testimonial-item {
+
+				.content,
+				.author h4,
+				.author span {
+					color: $secondary-color;
+				}
+
+				.author-thumb {
+					img {
+						border-color: $primary-color;
+					}
+
+					&::before {
+						background-image: url(../img/icons/down-arrow-2.png);
+					}
+				}
+
+			}
+
+			.slick-arrow {
+				color: $text-color;
+
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+
+}

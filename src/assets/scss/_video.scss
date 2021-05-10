@@ -1,0 +1,160 @@
+/*=======  Video CSS  =======*/
+.video-section {
+	position: relative;
+	z-index: 1;
+
+	.video-text {
+		.section-title {
+			.title-tag,
+			.title {
+				color: $white;
+			}
+			.title-tag::before {
+				background-color: $white;
+			}
+		}
+		p {
+			color: $white;
+		}
+		.main-btn {
+			margin-top: 40px;
+		}
+	}
+
+	.play-btn {
+		position: relative;
+		z-index: 1;
+		@media #{$sm} {
+			max-width: 100px;
+			margin-bottom: 30px;
+		}
+		i {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: 2;
+			font-size: 24px;
+			color: $primary-color;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&::before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -2;
+		background-color: $secondary-color;
+		content: '';
+		opacity: 0.8;
+	}
+
+	.line-shape {
+		position: absolute;
+		left: 2%;
+		top: 0;
+		bottom: 0;
+		opacity: 0.15;
+		z-index: -1;
+		img {
+			height: 100%;
+		}
+	}
+}
+
+.video-section-two {
+	height: 750px;
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	z-index: 2;
+	@media #{$md} {
+		height: 600px;
+	}
+	@media #{$xsm} {
+		height: 500px;
+	}
+
+	.video-cont {
+		.play-btn {
+			height: 150px;
+			width: 150px;
+			background-color: $white;
+			line-height: 150px;
+			text-align: center;
+			border-radius: 50%;
+			font-size: 20px;
+			color: $primary-color;
+			margin-bottom: 30px;
+			@include transition(0.3s);
+
+			@media #{$md} {
+				height: 100px;
+				width: 100px;
+				line-height: 100px;
+			}
+
+			@media #{$xsm} {
+				height: 80px;
+				width: 80px;
+				line-height: 80px;
+			}
+
+			&:hover {
+				color: $white;
+				background-color: $primary-color;
+			}
+		}
+		h2 {
+			color: $white;
+			font-size: 50px;
+			line-height: 1.1;
+			@media #{$md} {
+				font-size: 42px;
+			}
+			@media #{$sm} {
+				font-size: 32px;
+			}
+			@media #{$xsm} {
+				font-size: 28px;
+			}
+		}
+	}
+
+	&::before {
+		position: absolute;
+		content: '';
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+		background-color: #040f17;
+		opacity: 0.75;
+		z-index: -1;
+	}
+
+	.line-shape-one,
+	.line-shape-two {
+		position: absolute;
+		z-index: -1;
+		@media #{$md} {
+			max-width: 250px;
+		}
+		@media #{$xsm} {
+			max-width: 200px;
+		}
+	}
+
+	.line-shape-one {
+		left: 0;
+		top: 0;
+	}
+
+	.line-shape-two {
+		right: 0;
+		bottom: 0;
+	}
+}

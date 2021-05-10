@@ -1,0 +1,71 @@
+/*-----------------------------------------------------------------------------------
+    Template Name: Finsa - Consulting & Agency Html Template
+    Template URI: https://webtend.net/demo/html/finsa/
+    Author: WebTend
+    Author URI:  https://webtend.net/
+    Version: 1.0
+
+    Note: This is Main Style Scss File. 
+-----------------------------------------------------------------------------------
+	CSS INDEX
+	===================
+    01. Common 
+    02. Header
+    03. Banner
+    04. About
+    05. Service
+    06. Feature
+    07. Why Choose Us
+    08. Fact Boxes
+    09. Team Members
+    10. Skill Section
+    11. Testimonial
+    12. Blog 
+        => Sidebar
+    13. Project 
+    14. Working Process
+    15. Video
+    16. Call to Action
+    17. Advanced Tabs
+    18. FAQ
+    19. Contact
+    20. Careers
+    21. Details
+        => Blog Details
+        => Comment Template
+        => Services Details
+        => Projecct Details
+        => Team Details
+    22. Shop 
+        => Product Details
+    23. Footer
+        
+    
+    
+-----------------------------------------------------------------------------------*/
+
+@import 'variables';
+@import 'mixin';
+@import 'common';
+@import 'header';
+@import 'banner';
+@import 'about';
+@import 'services';
+@import 'feature';
+@import 'wcu';
+@import 'fact';
+@import 'team';
+@import 'skill';
+@import 'testimonial';
+@import 'blog-post';
+@import 'project';
+@import 'process';
+@import 'video';
+@import 'cta';
+@import 'advanced-tabs';
+@import 'faq';
+@import 'contact';
+@import 'careers';
+@import 'details';
+@import 'shop';
+@import 'footer';

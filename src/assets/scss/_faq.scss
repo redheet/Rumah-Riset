@@ -1,0 +1,182 @@
+/*=======  FAQ Looop  =======*/
+.faq-section {
+	position: relative;
+	z-index: 1;
+
+	.faq-content {
+		padding-left: 50px;
+
+		@media #{$lg} {
+			padding-left: 0;
+		}
+	}
+
+	.faq-loop {
+		&.accordion {
+			.card {
+				border: none;
+				margin-top: 10px;
+				border-radius: 0;
+
+				.card-header {
+					padding: 0;
+					border: none;
+					background-color: $white;
+					transition: 0.4s;
+					margin-bottom: 0;
+
+					h6 {
+						font-size: 18px;
+						padding: 20px 40px 20px 30px;
+						cursor: pointer;
+						transition: 0.4s;
+						position: relative;
+
+						@media #{$xsm} {
+							padding: 20px 30px 20px 20px;
+						}
+
+						span.icons {
+							position: absolute;
+							right: 30px;
+							top: 50%;
+							transform: translateY(-50%);
+
+							@media #{$xsm} {
+								right: 20px;
+							}
+						}
+					}
+
+					&.active-header,
+					&:hover {
+						background-color: $primary-color;
+
+						h6 {
+							color: $white;
+						}
+					}
+				}
+
+				.card-body {
+					padding: 0 40px 20px 30px;
+
+					@media #{$xsm} {
+						padding: 0 30px 20px 20px;
+					}
+
+					font-size: 15px;
+					line-height: 1.4;
+					background-color: $primary-color;
+					color: $white;
+				}
+			}
+
+			&.grey-header .card .card-header {
+				background-color: $soft-gery;
+
+				&.active-header,
+				&:hover {
+					background-color: $primary-color;
+
+				}
+			}
+
+			&.border-style {
+				.card {
+					.card-header {
+						background-color: $white;
+						border: 2px solid #eaeaea;
+
+						&.active-header,
+						&:hover {
+							background-color: $white;
+
+							h6 {
+								color: $secondary-color;
+							}
+						}
+
+						&.active-header {
+							border-color: $primary-color;
+							border-bottom-color: transparent;
+						}
+					}
+
+					.card-body {
+						background-color: $white;
+						color: $text-color;
+						border-left: 2px solid $primary-color;
+						border-right: 2px solid $primary-color;
+						border-bottom: 2px solid $primary-color;
+					}
+				}
+			}
+		}
+	}
+
+	&.with-illustration {
+		.faq-illustration-img {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: calc(50% + 15px);
+
+			@media #{$lg} {
+				right: calc(50% + 30px);
+			}
+
+			@media #{$md} {
+				position: unset;
+				transform: translate(0, 0);
+				margin: 0 auto 50px;
+				max-width: 550px;
+
+			}
+
+			@media #{$sm} {
+				max-width: 450px;
+			}
+		}
+	}
+
+	&.with-shape {
+		&::before {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 370px;
+			height: 330px;
+			background-image: url(../img/lines/12.png);
+			content: '';
+			background-size: cover;
+			z-index: -1;
+
+			@media #{$sm} {
+				width: 250px;
+				height: 220px;
+			}
+		}
+
+		.circle-img {
+			background-size: cover;
+			background-position: center;
+			height: 270px;
+			width: 270px;
+			position: absolute;
+			right: 160px;
+			top: 130px;
+			z-index: -1;
+			border-radius: 50%;
+			box-shadow: 0px 10px 60px 0px rgba(104, 102, 102, 0.34);
+
+			@media (max-width: 1800px) {
+				right: 4%;
+			}
+
+			@media #{$xl} {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,87 @@
+/*=======  Feature Boxes  =======*/
+.feature-boxes {
+	.feature-box {
+		height: 450px;
+		margin-top: 30px;
+		position: relative;
+		padding: 40px 30px;
+		display: flex;
+		align-items: flex-end;
+		z-index: 1;
+		overflow: hidden;
+
+		@media #{$lg} {
+			padding: 25px 20px;
+		}
+
+		@media #{$xsm} {
+			height: 400px;
+		}
+
+		.feature-bg {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -3;
+			@include transition(0.3s);
+
+			@media #{$xsm} {
+				background-position: center top;
+			}
+		}
+
+		.feature-desc {
+
+			a,
+			h4,
+			p {
+				color: $white;
+			}
+
+			h4 {
+				font-size: 24px;
+				letter-spacing: -1px;
+				font-weight: 600;
+
+				@media #{$lg} {
+					font-size: 22px;
+				}
+			}
+
+			.feature-link {
+				font-size: 40px;
+				margin-bottom: 10px;
+				line-height: 1;
+			}
+		}
+
+		&::before,
+		&::after {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: calc(100% + 80px);
+			height: 300px;
+			background-color: $primary-color;
+			opacity: 0.4;
+			content: '';
+			clip-path: polygon(0 0, 0 100%, 100% 100%);
+			z-index: -2;
+		}
+
+		&::after {
+			opacity: 0.8;
+			height: 250px;
+			z-index: -1;
+			width: 100%;
+		}
+
+		&:hover {
+			.feature-bg {
+				transform: scale(1.1);
+			}
+		}
+	}
+}

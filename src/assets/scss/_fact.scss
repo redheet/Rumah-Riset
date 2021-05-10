@@ -1,0 +1,225 @@
+/*======= Fact Boxes =======*/
+.fact-section {
+	padding-top: 550px;
+	padding-bottom: 90px;
+	position: relative;
+	z-index: 1;
+	margin-top: -450px;
+
+	&::after {
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background-image: url(../img/lines/05.png);
+		background-position: left top;
+		background-size: auto;
+		background-repeat: no-repeat;
+	}
+}
+
+.fact-boxes {
+	.fact-box {
+		.icon {
+			color: $primary-color;
+			line-height: 1;
+			margin-bottom: 20px;
+			font-size: 55px;
+			@include transition(0.3s);
+		}
+
+		.counter {
+			font-size: 55px;
+			font-weight: 600;
+			letter-spacing: -1px;
+			@include transition(0.3s);
+
+			@media #{$xsm} {
+				font-size: 40px;
+			}
+		}
+
+		p.title {
+			line-height: 1.2;
+			margin-top: 5px;
+		}
+
+		&.fact-box-two {
+			.counter {
+				color: $white;
+			}
+
+			.title {
+				color: #6f8697;
+			}
+		}
+
+		&.fact-box-three {
+			background-color: $soft-gery;
+			border-radius: 15px;
+			padding: 50px 20px;
+			position: relative;
+			@include transition(0.3s);
+			z-index: 1;
+
+			@media #{$xsm} {
+				padding: 40px 15px;
+			}
+
+			.counter {
+				@media #{$lg} {
+					font-size: 46px;
+				}
+
+				@media #{$xsm} {
+					font-size: 35px;
+				}
+			}
+
+			&::before {
+				position: absolute;
+				z-index: -1;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-image: url(../img/lines/15.png);
+				background-size: cover;
+				content: '';
+				opacity: 0;
+				visibility: hidden;
+				@include transition(0.3s);
+			}
+
+			&:hover {
+				background-color: $primary-color;
+
+				&,
+				.icon,
+				.counter {
+					color: $white;
+				}
+
+				&::before {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.fact-section-two {
+	position: relative;
+	z-index: 5;
+
+	.fact-two-inner {
+		background-color: $secondary-color;
+		padding: 115px 165px 75px;
+		margin: 0 -165px;
+		position: relative;
+		z-index: 1;
+
+		@media #{$xl} {
+			padding: 115px 40px 75px;
+			margin: 0 -40px;
+		}
+
+		@media #{$md} {
+			padding: 100px 30px 50px;
+			margin: 0 -30px;
+		}
+
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			content: '';
+			background-image: url(../img/lines/13.png);
+			background-size: cover;
+			background-position: center;
+		}
+	}
+}
+
+.fact-text {
+	padding-right: 50px;
+
+	@media #{$lg} {
+		padding-right: 0;
+	}
+
+	@media #{$md} {
+		margin-top: 50px;
+	}
+
+	.fact-list {
+		margin-bottom: 40px;
+
+		li {
+			padding-left: 70px;
+			margin-top: 30px;
+			position: relative;
+
+			@media #{$xsm} {
+				padding-left: 60px;
+			}
+
+			i {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 50px;
+				height: 50px;
+				line-height: 48px;
+				text-align: center;
+				color: $primary-color;
+				border: 2px solid $primary-color;
+				border-radius: 50%;
+
+				@media #{$xsm} {
+					height: 40px;
+					width: 40px;
+					line-height: 38px;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+.fact-section-three {
+	position: relative;
+	z-index: 1;
+
+	&::before {
+		position: absolute;
+		left: 100px;
+		bottom: -45px;
+		width: 385px;
+		height: 385px;
+		z-index: -1;
+		border-radius: 50%;
+		content: '';
+		background-color: $primary-color;
+		opacity: 0.05;
+
+		@media #{$lg} {
+			left: 1%;
+			bottom: -30px;
+		}
+
+		@media #{$xsm} {
+			width: 280px;
+			height: 280px;
+			bottom: -10px;
+		}
+	}
+}

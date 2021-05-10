@@ -1,0 +1,182 @@
+/*=======  Advanced Tabs  =======*/
+.advanced-tab {
+    .tab-buttons {
+        .nav-tabs {
+            border: none;
+            justify-content: center;
+
+            @media #{$sm} {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 10px;
+            }
+
+            @media #{$tiny} {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap: 10px;
+            }
+
+            a {
+                font-size: 18px;
+                font-weight: 700;
+                font-family: $ssp;
+                color: $secondary-color;
+                background-color: $soft-gery;
+                text-transform: uppercase;
+                padding: 10px 40px;
+                margin: 0 10px;
+
+                @media #{$lg} {
+                    font-size: 16px;
+                    padding: 10px 30px;
+                    margin: 0 5px;
+                }
+
+                @media #{$md} {
+                    margin-bottom: 10px;
+                }
+
+                @media #{$sm} {
+                    font-size: 15px;
+                    padding: 8px 10px;
+                    margin: 0;
+                    display: block;
+                    text-align: center;
+                }
+
+                @media #{$tiny} {
+                    text-align: left;
+                }
+
+                &:hover,
+                &.active {
+                    background-color: $primary-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        padding-top: 60px;
+
+        .tab-text-block {
+            .block-text {
+                @media #{$md} {
+                    margin-top: 50px;
+                }
+
+                .title {
+                    font-size: 50px;
+                    margin-bottom: 30px;
+
+                    @media #{$lg} {
+                        font-size: 42px;
+                    }
+
+                    @media #{$sm} {
+                        font-size: 34px;
+                    }
+
+                    @media #{$xsm} {
+                        font-size: 28px;
+                    }
+                }
+
+                ul {
+                    li {
+                        padding-left: 70px;
+                        position: relative;
+                        margin-top: 30px;
+
+                        i {
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 50px;
+                            height: 50px;
+                            line-height: 50px;
+                            text-align: center;
+                            color: #ff4a17;
+                            border: 2px solid #ff4a17;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+
+            &.left-image {
+                .block-text {
+                    padding-left: 50px;
+
+                    @media #{$lg} {
+                        padding-left: 30px;
+                    }
+
+                    @media #{$md} {
+                        padding-left: 0;
+                    }
+                }
+            }
+
+            &.right-image {
+                .block-text {
+                    padding-right: 50px;
+
+                    @media #{$lg} {
+                        padding-right: 30px;
+                    }
+
+                    @media #{$md} {
+                        padding-right: 0;
+                    }
+                }
+            }
+
+            &.with-left-circle,
+            &.with-right-circle {
+                position: relative;
+                z-index: 1;
+
+                &::before {
+                    position: absolute;
+                    left: -150px;
+                    bottom: -130px;
+                    height: 300px;
+                    width: 300px;
+                    background-color: transparent;
+                    border: 50px solid $primary-color;
+                    z-index: -1;
+                    content: "";
+                    border-radius: 50%;
+
+                    @media #{$xl} {
+                        left: -100px;
+                        bottom: -80px;
+                        width: 200px;
+                        height: 200px;
+                        border-width: 20px;
+                    }
+
+                    @media #{$md} {
+                        display: none;
+                    }
+                }
+            }
+
+            &.with-right-circle {
+                &::before {
+                    left: auto;
+                    right: -150px;
+
+                    @media #{$xl} {
+                        left: auto;
+                        right: -100px;
+                    }
+                }
+            }
+        }
+    }
+}
